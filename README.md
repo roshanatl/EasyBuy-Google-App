@@ -1,13 +1,15 @@
-## Google Cloud SQL/App Engine native EclipseLink JPA demo
+## A Shopping website hosted in Google App Engine .
 
-This demo contains an example program that shows how to use [EcliseLink](http://www.eclipse.org/eclipselink/) [JPA](http://en.wikipedia.org/wiki/Java_Persistence_API) with native MySQL connections to connect from [Google App Engine](https://developers.google.com/appengine/) to [Google Cloud SQL](https://developers.google.com/cloud-sql) both in development mode and on App Engine.
+EasyBuy is a shopping website build uisng java web technologies. Powered by Google App Engine as web host & Google Cloud SQL as Database.The pages are developed in JSP & Java Servlets with Bootstrap 3 . The web pages are responsive , adjust the look & feel for diffrent screen sizes of Desktops or mobile or tablets.
 
 
 ## Requirements
 
 * [Apache Maven](http://maven.apache.org) 3.0 or greater
-* a local MySQL server (for running locally with devserver)
+* Google App engine instance.
+* Google Cloud SQL instance (Database)
 * JDK 7+
+* Git Version Control
 
 Clone this repository to a local directory.  Maven will download all the other dependencies.
 
@@ -21,12 +23,7 @@ To build, run:
 
 ## Local deployment
 
-Make sure the `demo` database exists on the local MySQL server.
-
-To start the app, use the [App Engine Maven Plugin](http://code.google.com/p/appengine-maven-plugin/) that is included in this demo.  Just run the command:
-
-    mvn appengine:devserver
-
+TBD
 
 ## App Engine deployment
 
@@ -35,18 +32,17 @@ In `pom.xml` update the following properties:
 * `appengine.app.appId` to point to your App Engine application ID
 * `cloudsql.url` to point to your Cloud SQL instance by replacing `your-instance-name` with the full name of your instance (this looks either like `my_project:my_instance` for non-domain specific instances or like `my_domain:my_project:my_instance` for the domain-specific ones).
 
-Make sure the `demo` database exists on the Cloud SQL instance.
+Make sure the  database exists on the Cloud SQL instance.
 
-To deploy the app run the following command:
+To deploy the app run the following command from command line or Shell:
 
-    mvn appengine:update
+Go to the folder of the app with target.
 
-
-## Contributing changes
-
-* See [CONTRIB.md](CONTRIB.md)
+appcfg.cmd -A roshaneasybuy update target\native-mysql-eclipselink-jpa-1.0
+   
 
 
-## Licensing
+Visit the website here :
 
-* See [LICENSE](LICENSE)
+http://roshaneasybuy.appspot.com
+
