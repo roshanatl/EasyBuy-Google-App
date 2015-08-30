@@ -16,7 +16,7 @@
 
 package com.google.appengine.demos;
 
-import com.google.appengine.api.utils.SystemProperty;
+//import com.google.appengine.api.utils.SystemProperty;
 
 import java.io.IOException;
 import java.util.Date;
@@ -34,19 +34,19 @@ public class EclipselinkJpaServlet extends HttpServlet {
     res.setContentType("text/plain");
 
     Map<String, String> properties = new HashMap();
-    if (SystemProperty.environment.value() ==
-          SystemProperty.Environment.Value.Production) {
+//    if (SystemProperty.environment.value() ==
+  //        SystemProperty.Environment.Value.Production) {
       properties.put("javax.persistence.jdbc.driver",
           "com.mysql.jdbc.GoogleDriver");
       properties.put("javax.persistence.jdbc.url",
           System.getProperty("cloudsql.url"));
-    } else {
+ /*   } else {
       properties.put("javax.persistence.jdbc.driver",
           "com.mysql.jdbc.Driver");
       properties.put("javax.persistence.jdbc.url",
           System.getProperty("cloudsql.url.dev"));
     }
-
+*/
     EntityManagerFactory emf = Persistence.createEntityManagerFactory(
         "Demo", properties);
 

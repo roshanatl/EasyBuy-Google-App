@@ -6,15 +6,15 @@
   <version>1.0</version>
 
   <groupId>com.google.appengine.demos</groupId>
-  <artifactId>native-mysql-eclipselink-jpa</artifactId>
+  <artifactId>easybuy</artifactId>
 
   <properties>
-    <appengine.app.appId>your-app-id</appengine.app.appId>
+    <appengine.app.appId>easybuy-1049</appengine.app.appId>
     <appengine.app.version>1</appengine.app.version>
     <appengine.target.version>1.9.20</appengine.target.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <cloudsql.url>jdbc:google:mysql://your-instance-name/demo?user=root</cloudsql.url>
-    <cloudsql.url.dev>jdbc:mysql://localhost/demo?user=root</cloudsql.url.dev>
+    <cloudsql.url>jdbc:google:mysql://roshaneasybuy:shopdata/easy?user=root</cloudsql.url>
+    <cloudsql.url.dev>jdbc:google:mysql://easybuy-1049:database?user=root</cloudsql.url.dev>
   </properties>
 
   <dependencies>
@@ -59,6 +59,18 @@
       <version>${appengine.target.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-core</artifactId>
+      <version>8.0.23</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
 
   <build>
@@ -97,5 +109,5 @@
       </plugin>
     </plugins>
   </build>
-
+    <name>EasyBuy-Live</name>
 </project>
