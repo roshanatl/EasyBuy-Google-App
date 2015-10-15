@@ -31,6 +31,7 @@ public class Item implements Serializable {
     private byte[] productImage;
     private int productQuantity;
     private Double price;
+    private long sellerID;
 
     public Double getPrice() {
         return price;
@@ -80,6 +81,14 @@ public class Item implements Serializable {
 
     public void setProductQuantity(int productQuantity) {
         this.productQuantity = productQuantity;
+    }
+
+    public long getSellerID() {
+        return sellerID;
+    }
+
+    public void setSellerID(long sellerID) {
+        this.sellerID = sellerID;
     }
 
     @Override
